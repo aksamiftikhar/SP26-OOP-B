@@ -1,3 +1,5 @@
+package lecture02;
+
 public class GradeBook
 {
 	int marks;

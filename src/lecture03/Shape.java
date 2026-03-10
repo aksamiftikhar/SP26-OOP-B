@@ -1,3 +1,5 @@
+package lecture03;
+
 import java.util.Scanner;
 
 public class Shape

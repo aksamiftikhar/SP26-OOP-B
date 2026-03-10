@@ -1,3 +1,5 @@
+package lecture03;
+
 public class Car
 {
 	private int model;
