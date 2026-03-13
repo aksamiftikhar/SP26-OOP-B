@@ -30,3 +30,6 @@ bin/
 
 # compiled class files
 *.class
+
+# agent skills
+.agent/
