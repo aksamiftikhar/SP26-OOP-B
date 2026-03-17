@@ -57,7 +57,8 @@ public class StringDemo {
         System.out.println("fullName: " + fullName);
         System.out.println("firstName is still: " + firstName); // unchanged
 
-        // Each + creates a new String, which is INEFFICIENT in loops!
+        // Beware: Each + creates a new String, which is INEFFICIENT in loops!
+        // Note: You can use StringBuilder class in this case (NOT COVERED in our course).
         String result = "";
         for (int i = 1; i <= 5; i++) {
             result = result + i + " "; // 5 new String objects created!
@@ -67,7 +68,7 @@ public class StringDemo {
         System.out.println();
 
 
-        // ─── Part 5: Why Immutability Matters ──────────────────
+        // ─── Part 4: Why Immutability Matters ──────────────────
         System.out.println("--- Part 5: Why Immutability Matters ---");
         System.out.println("1. SAFETY   — Strings cannot be changed by other code unexpectedly");
         System.out.println("2. POOLING  — JVM can reuse String literals (saves memory)");
