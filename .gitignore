@@ -33,3 +33,6 @@ bin/
 
 # agent skills
 .agent/
+
+# github copilot data migration
+ .idea/
