@@ -57,6 +57,9 @@ public class ArrayListPracticeSolution {
             System.out.println(s);
         }
 
+        // write a simple for loop for the above loop
+
+
         // --- TASK 4 ---
         System.out.println("\n--- Task 4: Statistics ---");
         int sum = 0;

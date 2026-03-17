@@ -66,29 +66,10 @@ public class StringDemo {
 
         System.out.println();
 
-        // ─── Part 4: StringBuilder (Mutable Alternative) ──────
-        System.out.println("--- Part 4: StringBuilder (Mutable Alternative) ---");
-
-        StringBuilder sb = new StringBuilder();
-        for (int i = 1; i <= 5; i++) {
-            sb.append(i).append(" "); // modifies the SAME object — efficient!
-        }
-        System.out.println("StringBuilder result: " + sb.toString());
-
-        // StringBuilder is useful for building large strings
-        StringBuilder carInfo = new StringBuilder();
-        carInfo.append("Make: Honda City\n");
-        carInfo.append("Model: 2024\n");
-        carInfo.append("City: Islamabad\n");
-        System.out.println(carInfo);
-
-        System.out.println();
 
         // ─── Part 5: Why Immutability Matters ──────────────────
         System.out.println("--- Part 5: Why Immutability Matters ---");
         System.out.println("1. SAFETY   — Strings cannot be changed by other code unexpectedly");
         System.out.println("2. POOLING  — JVM can reuse String literals (saves memory)");
-        System.out.println("3. HASHING  — String's hashCode never changes (used in HashMap keys)");
-        System.out.println("4. SECURITY — Passwords/URLs stored as String cannot be altered");
     }
 }

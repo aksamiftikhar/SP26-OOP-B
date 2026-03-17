@@ -93,11 +93,12 @@ public class Car {
     // The object of ANY class in java is also an object of the "Object" class.
 
     public boolean equals(Object obj) {
-//        if (this == obj)
-//            return true;
-//        if (obj == null || getClass() != obj.getClass())
-//            return false;
+        if (this == obj)
+            return true;
 
+        if (!(obj instanceof Car))
+            return false;
+        // obj is a Car object
         Car other = (Car) obj;
 
         // double x = (double) yInt;
