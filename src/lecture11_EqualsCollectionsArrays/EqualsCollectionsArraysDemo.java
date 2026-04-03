@@ -11,17 +11,23 @@ import java.util.Collections;
 public class EqualsCollectionsArraysDemo {
 
     public static void main(String[] args) {
+//        BookWithEquals bwe  = new BookWithEquals("abc", "c");
+//
+//        System.out.println(bwe);
+
 //        BookNoEquals bne = new BookNoEquals("abc", "c");
+//        // ==
 //        System.out.println(bne.equals(new BookNoEquals("abc", "c"))); // false
+//
 //        System.out.println(bne.equals(bne)); // true
 //
 //        BookWithEquals bwe1 = new BookWithEquals("abc", "c");
 //        BookWithEquals bwe2 = new BookWithEquals("abc", "c1");
-
+//
 //        bwe1.equals(bwe1); // true
 //        Object obj = new Object();
-//        bwe2.equals(bne);
-
+//        bwe2.equals(obj); // False
+//
 //        System.out.println(bwe1.equals(bwe2));
 
 //        System.out.println("my string"=="my string");           // true: comparing references
@@ -32,7 +38,7 @@ public class EqualsCollectionsArraysDemo {
 //
         demoArrayListWithoutEquals();
         demoArrayListWithEquals();
-//        demoArraysEquals();
+        demoArraysEquals();
     }
 
     private static void demoArrayListWithoutEquals() {
@@ -51,9 +57,9 @@ public class EqualsCollectionsArraysDemo {
         System.out.println("List: " + list);
         System.out.println("Probe object: " + probe);
         System.out.println("list.contains(probe): " + list.contains(probe));
-//        System.out.println("list.indexOf(probe): " + list.indexOf(probe));
-//        System.out.println("list.remove(probe): " + list.remove(probe));
-//        System.out.println("Reason: default equals compares references (same memory object).\n");
+        System.out.println("list.indexOf(probe): " + list.indexOf(probe));
+        System.out.println("list.remove(probe): " + list.remove(probe));
+        System.out.println("Reason: default equals compares references (same memory object).\n");
     }
 
     private static void demoArrayListWithEquals() {
@@ -92,14 +98,13 @@ public class EqualsCollectionsArraysDemo {
         };
 
         BookWithEquals[] b1 = {
-                new BookWithEquals("Java", "Deitel"),
+                new BookWithEquals("Java1", "Deitel"),
                 new BookWithEquals("OOP", "Author X")
         };
         BookWithEquals[] b2 = {
                 new BookWithEquals("Java", "Deitel"),
                 new BookWithEquals("OOP", "Author X")
         };
-        System.arraycopy(a1, 0, a2, 0, a1.length);
 
         System.out.println("Arrays.equals(a1, a2): " + Arrays.equals(a1, a2));
         System.out.println("Arrays.equals(b1, b2): " + Arrays.equals(b1, b2));
@@ -148,23 +153,19 @@ class BookWithEquals {
         }
 
         BookWithEquals other = (BookWithEquals) obj; // type-casting / type-conversion
+
         return this.title.equals(other.title) ;
     }
-
-    @Override
-    public int hashCode() {
-        int result = title.hashCode();
-        result = 31 * result + author.hashCode();
-        return result;
-    }
-
     @Override
     public String toString() {
-        return "BookWithEquals{" +
+        return "BookNoEquals{" +
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 '}';
     }
+
+
+
 }
 
 
